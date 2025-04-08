@@ -1031,11 +1031,3 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
--->>>
--- jjでインサートモードを抜ける
-vim.keymap.set('i', 'jj', '<ESC>')
--- クリップボード貼り付け
-vim.keymap.set('n', '<Leader>p', '"+p')
-vim.keymap.set('v', '<Leader>p', '"+p')
---<<<

@@ -2,4 +2,13 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+
+-->>>
+-- jjでインサートモードを抜ける
+vim.keymap.set('i', 'jj', '<ESC>')
+-- クリップボード貼り付け
+vim.keymap.set('n', '<Leader>p', '"+p')
+vim.keymap.set('v', '<Leader>p', '"+p')
+--<<<
+
 return {}
