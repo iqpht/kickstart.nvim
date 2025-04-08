@@ -1,12 +1,12 @@
--- ƒJ[ƒ\ƒ‹ˆÚ“®
+-- ã‚«ãƒ¼ã‚½ãƒ«ç§»å‹•
 return {
   'smoka7/hop.nvim',
-  version = "*",
+  version = '*',
   lazy = true,
   keys = {
     { '<Leader>h', '<cmd>HopChar1<cr>' },
   },
   config = function()
-    require'hop'.setup()
-  end
+    require('hop').setup()
+  end,
 }
