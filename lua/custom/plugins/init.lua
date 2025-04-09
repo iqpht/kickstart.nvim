@@ -4,18 +4,14 @@
 -- See the kickstart.nvim README for more information
 
 -->>>
--- フォント
-vim.opt.guifont = 'Bizin Gothic Discord NF:h11'
-
 -- jjでインサートモードを抜ける
 vim.keymap.set('i', 'jj', '<ESC>')
 
--- クリップボード貼り付け
-vim.keymap.set('n', '<Leader>p', '"+p', { desc = '[p]aste' })
-vim.keymap.set('v', '<Leader>p', '"+p', { desc = '[p]aste' })
-
--- notes
-vim.keymap.set('n', '<Leader>mn', '<cmd>cd C:\\OneDrive\\notes|Telescope find_files<cr>', { desc = '[n]otes' })
+-- 不可視文字
+vim.opt.listchars = { eol = '↲', tab = '>-', trail = '_' }
+vim.opt.list = true
+-- 不可視文字トグル
+vim.keymap.set('n', '<Leader>1', ':setlocal list!<CR>')
 
 -- ビジュアルモードでのペースト時に、ヤンクしない
 vim.keymap.set('v', 'p', '"_dP')
@@ -23,6 +19,28 @@ vim.keymap.set('v', 'p', '"_dP')
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'X', '"_X')
 vim.keymap.set('n', 's', '"_s')
+
+-- バックアップファイル出力無効
+vim.opt.backup = false
+vim.opt.writebackup = false
+-- swpファイル出力
+vim.opt.swapfile = true
+-- undoファイル出力
+vim.opt.undofile = true
+vim.opt.undodir = (os.getenv 'HOME' .. '/dot/tmp/')
+
+-- カレントディレクトリの自動移動
+vim.opt.autochdir = true
+
+-- フォント
+vim.opt.guifont = 'Bizin Gothic Discord NF:h11'
+
+-- クリップボード貼り付け
+vim.keymap.set('n', '<Leader>p', '"+p', { desc = '[p]aste' })
+vim.keymap.set('v', '<Leader>p', '"+p', { desc = '[p]aste' })
+
+-- notes
+vim.keymap.set('n', '<Leader>mn', '<cmd>cd C:\\OneDrive\\notes|Telescope find_files<cr>', { desc = '[n]otes' })
 --<<<
 
 return {}
