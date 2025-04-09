@@ -27,7 +27,7 @@ vim.opt.writebackup = false
 vim.opt.swapfile = true
 -- undoファイル出力
 vim.opt.undofile = true
-vim.opt.undodir = (os.getenv 'HOME' .. '/dot/tmp/')
+vim.opt.undodir = vim.fs.normalize '~/off/tmp'
 
 -- カレントディレクトリの自動移動
 vim.opt.autochdir = true
