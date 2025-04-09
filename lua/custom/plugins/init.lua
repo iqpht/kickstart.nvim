@@ -11,6 +11,8 @@ vim.keymap.set('i', 'jj', '<ESC>')
 -- クリップボード貼り付け
 vim.keymap.set('n', '<Leader>p', '"+p', { desc = '[p]aste' })
 vim.keymap.set('v', '<Leader>p', '"+p', { desc = '[p]aste' })
+-- notes
+vim.keymap.set('n', '<Leader>mn', '<cmd>cd C:\\OneDrive\\notes|Telescope find_files<cr>', { desc = '[n]otes' })
 --<<<
 
 return {}
