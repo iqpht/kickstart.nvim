@@ -32,6 +32,9 @@ vim.opt.undodir = vim.fs.normalize '~/off/tmp'
 -- カレントディレクトリの自動移動
 vim.opt.autochdir = true
 
+-- true color(for alacrity)
+vim.api.nvim_set_option_value('termguicolors', true, {})
+
 -- フォント
 vim.opt.guifont = 'Bizin Gothic Discord NF:h11'
 
