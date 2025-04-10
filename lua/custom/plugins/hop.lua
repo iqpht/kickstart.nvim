@@ -4,7 +4,7 @@ return {
   version = '*',
   lazy = true,
   keys = {
-    { '<Leader>mh', '<cmd>HopChar1<cr>', desc = '[h]op' },
+    { '<Leader>o', '<cmd>HopChar1<cr>', mode = '', desc = 'h[o]p' },
   },
   config = function()
     require('hop').setup()
