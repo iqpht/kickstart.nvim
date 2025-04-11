@@ -35,6 +35,9 @@ vim.opt.autochdir = true
 -- true color(for alacrity)
 vim.api.nvim_set_option_value('termguicolors', true, {})
 
+-- 読み込み時の文字コード(左から順に試す)
+vim.opt.fileencodings = 'utf-8,iso-2022-jp,cp932,utf-16le'
+
 -- フォント
 vim.opt.guifont = 'Bizin Gothic Discord NF:h11'
 
@@ -44,6 +47,14 @@ vim.keymap.set('v', '<Leader>p', '"+p', { desc = '[p]aste' })
 
 -- notes
 vim.keymap.set('n', '<Leader>mn', '<cmd>cd C:\\OneDrive\\notes|Telescope find_files<cr>', { desc = '[n]otes' })
+
+-- daily note
+vim.api.nvim_create_user_command('DailyNote', function()
+  local basePath = '~/Onedrive/notes/daily/'
+  local todayDailyNotePath = basePath .. os.date '%Y-%m-%d' .. '.md'
+  vim.cmd('e ' .. todayDailyNotePath)
+end, {})
+vim.keymap.set('n', '<leader>md', '<cmd>DailyNote<cr>', { desc = '[d]aily note' })
 --<<<
 
 return {}
