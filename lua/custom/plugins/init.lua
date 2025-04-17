@@ -39,7 +39,8 @@ vim.api.nvim_set_option_value('termguicolors', true, {})
 vim.opt.fileencodings = 'utf-8,iso-2022-jp,cp932,utf-16le'
 
 -- フォント
-vim.opt.guifont = 'Bizin Gothic Discord NF:h11'
+-- vim.opt.guifont = 'Bizin Gothic Discord NF:h11'
+vim.opt.guifont = 'HackGen Console NF:h11'
 
 -- クリップボード貼り付け
 vim.keymap.set('n', '<Leader>p', '"+p', { desc = '[p]aste' })
