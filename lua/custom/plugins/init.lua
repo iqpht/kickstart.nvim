@@ -38,6 +38,10 @@ vim.api.nvim_set_option_value('termguicolors', true, {})
 -- 読み込み時の文字コード(左から順に試す)
 vim.opt.fileencodings = 'utf-8,iso-2022-jp,cp932,utf-16le'
 
+-- バッファ移動
+vim.keymap.set('n', '<Leader>,', ':bprevious<CR>')
+vim.keymap.set('n', '<Leader>.', ':bnext<CR>')
+
 -- フォント
 vim.opt.guifont = 'Bizin Gothic Discord NF:h11'
 -- vim.opt.guifont = 'HackGen Console NF:h11'
