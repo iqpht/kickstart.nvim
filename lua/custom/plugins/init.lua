@@ -11,7 +11,7 @@ vim.keymap.set('i', 'jj', '<ESC>')
 vim.opt.listchars = { eol = '↲', tab = '>-', trail = '_' }
 vim.opt.list = true
 -- 不可視文字トグル
-vim.keymap.set('n', '<Leader>1', ':setlocal list!<CR>')
+vim.keymap.set('n', '<Leader>mv', ':setlocal list!<CR>', { desc = '[v]isible' })
 
 -- ビジュアルモードでのペースト時に、ヤンクしない
 vim.keymap.set('v', 'p', '"_dP')
