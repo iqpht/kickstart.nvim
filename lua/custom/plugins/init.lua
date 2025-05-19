@@ -54,12 +54,12 @@ vim.keymap.set('v', '<Leader>p', '"+p', { desc = '[p]aste' })
 vim.keymap.set('n', '<Leader>mn', '<cmd>cd C:\\OneDrive\\notes|Telescope find_files<cr>', { desc = '[n]otes' })
 
 -- daily note
--- vim.api.nvim_create_user_command('DailyNote', function()
---   local basePath = '~/Onedrive/notes/daily/'
---   local todayDailyNotePath = basePath .. os.date '%Y-%m-%d' .. '.md'
---   vim.cmd('e ' .. todayDailyNotePath)
--- end, {})
--- vim.keymap.set('n', '<leader>md', '<cmd>DailyNote<cr>', { desc = '[d]aily note' })
+vim.api.nvim_create_user_command('DailyNote', function()
+  local basePath = '~/Onedrive/notes/daily/'
+  local todayDailyNotePath = basePath .. os.date '%Y-%m-%d' .. '.md'
+  vim.cmd('e ' .. todayDailyNotePath)
+end, {})
+vim.keymap.set('n', '<leader>md', '<cmd>DailyNote<cr>', { desc = '[d]aily note' })
 --<<<
 
 return {}
